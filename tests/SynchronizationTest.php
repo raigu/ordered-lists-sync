@@ -2,6 +2,9 @@
 
 namespace Raigu\OrderedDataSynchronization;
 
+/**
+ * @covers \Raigu\OrderedDataSynchronization\Synchronization
+ */
 final class SynchronizationTest extends \PHPUnit\Framework\TestCase
 {
     /**
