@@ -8,8 +8,8 @@ Package for ordered data synchronization. Suitable for large datasets.
 # Usage
 
 ```php
-$s = new \Raigu\OrderedDataSynchronization\Synchronization();
-$s(
+$synchronization = new \Raigu\OrderedDataSynchronization\Synchronization();
+$synchronization(
     new ArrayIterator(['A', 'B', 'D']), // source
     new ArrayIterator(['B', 'C', 'D']), // Target
     function ($element) { echo "ADD: {$element}\n"; },
