@@ -5,8 +5,8 @@ Package for ordered data synchronization. Suitable for large datasets.
 ```php
 $s = new \Raigu\OrderedDataSynchronization\Synchronization();
 $s(
-    new ArrayIterator(['A', 'B']), // source
-    new ArrayIterator(['B', 'C']), // Target
+    new ArrayIterator(['A', 'B', 'D']), // source
+    new ArrayIterator(['B', 'C', 'D']), // Target
     function ($element) { echo "ADD: {$element}\n"; },
     function ($element) { echo "REMOVE: {$element}\n"; }
 );
