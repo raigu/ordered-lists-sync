@@ -3,7 +3,7 @@ Package for ordered data synchronization. Suitable for large datasets.
 # Usage
 
 ```php
-$s = new Synchronizer();
+$s = new \Raigu\OrderedDataSynchronization\Synchronization();
 $s(
     new ArrayIterator(['A', 'B']), // source
     new ArrayIterator(['B', 'C']), // Target
