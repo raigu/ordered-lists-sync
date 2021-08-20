@@ -1,0 +1,13 @@
+{
+    "name": "raigur/ordered-data-sync",
+    "description": "Algorithm for synchronizing target data based on source data",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rait Kapp",
+            "email": "3442567+raigu@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
