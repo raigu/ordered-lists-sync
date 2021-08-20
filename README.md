@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/raigu/ordered-data-sync/v/stable)](https://packagist.org/packages/raigu/ordered-data-sync)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![build](https://github.com/raigu/ordered-data-sync/workflows/build/badge.svg)](https://github.com/raigu/ordered-data-sync/actions)
+[![codecov](https://codecov.io/gh/raigu/ordered-data-sync/branch/main/graph/badge.svg?token=43B0X95CZ3)](https://codecov.io/gh/raigu/ordered-data-sync)
+
 Package for ordered data synchronization. Suitable for large datasets.
 
 # Usage
