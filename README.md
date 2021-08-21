@@ -36,7 +36,9 @@ ADD: A
 REMOVE: C
 ```
 
-See more examples in [./demo](./demo).
+# Use Cases
+
+* Keeping a relational database table in sync with another (demo: [./demo/database_tables.php](./demo/database_tables.php))
 
 
 # Algorithm
