@@ -1,5 +1,5 @@
 {
-    "name": "raigur/ordered-lists-sync",
+    "name": "raigu/ordered-lists-sync",
     "description": "Algorithm for synchronizing target data based on source data",
     "type": "library",
     "license": "MIT",
