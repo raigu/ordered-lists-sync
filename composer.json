@@ -1,6 +1,6 @@
 {
     "name": "raigu/ordered-lists-sync",
-    "description": "Algorithm for synchronizing target data based on source data",
+    "description": "Library for synchronizing ordered data with the minimum of insert and delete operations.",
     "type": "library",
     "license": "MIT",
     "authors": [

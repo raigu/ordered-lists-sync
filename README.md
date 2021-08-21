@@ -4,7 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Dependents](http://poser.pugx.org/raigu/ordered-lists-sync/dependents)](https://packagist.org/packages/raigu/ordered-lists-sync)
 
-Package for ordered data synchronization. Suitable for large datasets in different environments.
+Library for synchronizing ordered data with the minimum of insert and delete operations. 
+Suitable for lage data sets in isolated environments.
 
 
 # Compatibility
