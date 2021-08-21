@@ -36,6 +36,9 @@ ADD: A
 REMOVE: C
 ```
 
+See more examples in [./demo](./demo).
+
+
 # Algorithm
 
 Algorithm takes two iterators as input: source and target.
