@@ -5,6 +5,17 @@
 
 Package for ordered data synchronization. Suitable for large datasets.
 
+
+# Compatibility 
+
+* PHP 7.4, 8.0
+
+# Installations
+
+```bash
+$ composer require raigu/ordered-lists-sync
+```
+
 # Usage
 
 ```php
@@ -26,12 +37,21 @@ REMOVE: C
 
 # Algorithm
 
-If two lists are ordered, then it is possible with one walk through to detect all added or removed elements. It is
-basically like dictionary where all words are ordered. For every word you know exactly where it should be. Therefore,
-if you place cursor at the beginning of source and target and start to walk through, then you can determine if 
-something is added or should be removed. 
+Algorithm takes two iterators as input: source and target.
+Source is the list based on which the target must be kept in sync.
+The target is the list that represents currents state and is used to detect what element
+has been added and which is removed.
 
-Simplified example which will not cover all cases. V denots position of the iterator.
+Requirements for iterators:
+
+* iterator must return ordered lists
+* source and target must use exactly same ordering (important when source and target are from different databases with different collation)
+* elements returned by iterator can be either string or implement [\Stringable](https://www.php.net/Stringable) interface.
+  When using `\Stringable` then the `__toString` method must return a value used in comparison functions. This value
+  must contain all values that are required to keep in sync.
+
+Algorithm works same way like we use dictionary. If all words are ordered, then we know exactly where it should be
+or detect if the word is missing. Simplified example which will not cover all cases. `V` denotes position of the iterator.
 
 ```text
         V
