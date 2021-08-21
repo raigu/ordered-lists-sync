@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Dependents](http://poser.pugx.org/raigu/ordered-lists-sync/dependents)](https://packagist.org/packages/raigu/ordered-lists-sync)
 
-Package for ordered data synchronization. Suitable for large datasets.
+Package for ordered data synchronization. Suitable for large datasets in different environments.
 
 
 # Compatibility 
@@ -38,16 +38,41 @@ REMOVE: C
 
 # Use Cases
 
-* Keeping a relational database table in sync with another (demo: [./demo/database_tables.php](./demo/database_tables.php))
-* Keeping local data in sync with data available in internet (demo: [./demo/internet_to_database.php](./demo/internet_to_database.php))
+Because the algorithm iterates through source and target lists only once, this allows creating stream based approach. 
+This is specially important if there are huge data sets, and they can not be hold in memory. 
+
+Algorithm generates minimal addition and removal operations. It is specially suitable in cases where writing is expensive.
+Also, this way it has low affect to the implementation that depends on target data because changes are minimal.
+
+
+Using source and target type as Iterator gives two good property.
+
+First, you can create your own iterator as separate components which are easier to develop and test. 
+You can use [generator](https://www.php.net/manual/en/language.generators.overview.php)
+, or as class implementing [Iterate](https://www.php.net/manual/en/class.iterator.php)
+or [IteratorAggregate](https://www.php.net/manual/en/class.iteratoraggregate.php) interface.
+Also [Sandard PHP Library (SPL) iterators](https://www.php.net/manual/en/spl.iterators.php) can be used for example to
+make regular array usable with this component.
+
+Secondly, you can create a components which do not do any job in constructor. It is considered best practise in OOP
+if the constructors does not do the actual job, just initializes the instance. This property is specially handy 
+if you are using some dependency injection or declarative programming.
+
+
+Here are some sample use cases with demo code:
+
+* Keeping a relational database table in sync with another (
+  demo: [./demo/database_tables.php](./demo/database_tables.php))
+* Keeping local data in sync with data available in internet (
+  demo: [./demo/internet_to_database.php](./demo/internet_to_database.php))
 
 
 # Algorithm
 
-Algorithm takes two iterators as input: source and target.
-Source is the list based on which the target must be kept in sync.
-The target is the list that represents currents state and is used to detect what element
-has been added and which is removed.
+
+Algorithm takes two iterators as input: source and target. Source is the list based on which the target must be kept in
+sync. The target is the list that represents currents state and is used to detect what element has been added and which
+is removed.
 
 Requirements for iterators:
 
