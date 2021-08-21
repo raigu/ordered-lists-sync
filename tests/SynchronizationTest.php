@@ -70,6 +70,38 @@ final class SynchronizationTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals([new Str('C')], $removed);
     }
 
+    /**
+     * @test
+     */
+    public function handles_duplicates()
+    {
+        $sut = new Synchronization();
+
+        $added = [];
+        $addSpy = function ($value) use (&$added) {
+            $added[] = $value;
+        };
+
+        $removed = [];
+        $removeSpy = function ($value) use (&$removed) {
+            $removed[] = $value;
+        };
+
+        $sut(
+            new \ArrayIterator([
+                new Str('A'),
+                new Str('A'),
+            ]),
+            new \ArrayIterator([
+                new Str('A'),
+            ]),
+            $addSpy,
+            $removeSpy
+        );
+
+        $this->assertEquals([new Str('A')], $added, 'One A was more in source. Should be added to target.');
+    }
+
     public function samples(): array
     {
         return [

@@ -49,6 +49,7 @@ Requirements for iterators:
 * elements returned by iterator can be either string or implement [\Stringable](https://www.php.net/Stringable) interface.
   When using `\Stringable` then the `__toString` method must return a value used in comparison functions. This value
   must contain all values that are required to keep in sync.
+* lists can contain duplicated elements
 
 Algorithm works same way like we use dictionary. If all words are ordered, then we know exactly where it should be
 or detect if the word is missing. Simplified example which will not cover all cases. `V` denotes position of the iterator.
