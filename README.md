@@ -20,13 +20,13 @@ $ composer require raigu/ordered-lists-sync
 
 # Usage
 
-`\Raigu\OrderedDataSynchronization\Synchronization` compares source and target lists. It detects which elements have
+`\Raigu\OrderedListsSynchronization\Synchronization` compares source and target lists. It detects which elements have
 been added or removed in source compared to target and calls corresponding callback.
 
 The source and target must be of type `Iterator`.
 
 ```php
-$synchronization = new \Raigu\OrderedDataSynchronization\Synchronization();
+$synchronization = new \Raigu\OrderedListsSynchronization\Synchronization();
 $synchronization(
     $source = new ArrayIterator(['A', 'B', 'D']), 
     $target = new ArrayIterator(['B', 'C', 'D']),
@@ -56,7 +56,7 @@ Here are some sample use cases with demo code:
 
 # Design
 
-The `\Raigu\OrderedDataSynchronization\Synchronization` has only one purpose. Therefore, it
+The `\Raigu\OrderedListsSynchronization\Synchronization` has only one purpose. Therefore, it
 is [designed](https://www.php.net/manual/en/language.oop5.magic.php#object.invoke) so the instance will be a function,
 no method is exposed.
 

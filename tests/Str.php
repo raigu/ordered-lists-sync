@@ -1,6 +1,6 @@
 <?php
 
-namespace Raigu\OrderedDataSynchronization;
+namespace Raigu\OrderedListsSynchronization;
 
 require_once __DIR__ . '/Stringable.php';
 

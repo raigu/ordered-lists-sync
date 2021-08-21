@@ -90,7 +90,7 @@ $counts = [
     'removed' => 0,
 ];
 
-$synchronization = new \Raigu\OrderedDataSynchronization\Synchronization();
+$synchronization = new \Raigu\OrderedListsSynchronization\Synchronization();
 $synchronization(
     source(),
     target($pdo),

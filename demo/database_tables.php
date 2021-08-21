@@ -65,7 +65,7 @@ $remove = function ($element) use ($sthd) {
     $sthd->execute([$element]);
 };
 
-$synchronization = new \Raigu\OrderedDataSynchronization\Synchronization();
+$synchronization = new \Raigu\OrderedListsSynchronization\Synchronization();
 $synchronization($source(), $target(), $add, $remove);
 
 // Presenting results

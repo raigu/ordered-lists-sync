@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Raigu\\OrderedDataSynchronization\\": "src/"
+            "Raigu\\OrderedListsSynchronization\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Raigu\\OrderedDataSynchronization\\": "tests/"
+            "Raigu\\OrderedListsSynchronization\\": "tests/"
         }
     },
     "require": {

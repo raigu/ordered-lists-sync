@@ -1,6 +1,6 @@
 <?php
 
-namespace Raigu\OrderedDataSynchronization;
+namespace Raigu\OrderedListsSynchronization;
 
 use Iterator;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Raigu\OrderedDataSynchronization;
+namespace Raigu\OrderedListsSynchronization;
 
 /**
- * @covers \Raigu\OrderedDataSynchronization\Synchronization
+ * @covers \Raigu\OrderedListsSynchronization\Synchronization
  */
 final class SynchronizationTest extends \PHPUnit\Framework\TestCase
 {
