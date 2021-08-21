@@ -1,4 +1,14 @@
 <?php
+/**
+ * This demo creates an in-memory SQLite database with two tables 'source' and 'target'.
+ * It seeds the source and target with data, executes the synchronization and
+ * prints out the resulting source and target table content. At the end the
+ * target table contains same data as the source table.
+ *
+ * This example uses generators ($source and $target). Generators and Iterators
+ * are very powerful tools that allow to create well tested and memory efficient
+ * components, that can be combined.
+ */
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
