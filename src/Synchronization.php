@@ -28,8 +28,8 @@ final class Synchronization
 {
     public function __invoke(Iterator $source, Iterator $target, callable $add, callable $remove)
     {
-        $s = $source->current();
-        $t = $target->current();
+        $s = $source->valid() ? $source->current() : null;
+        $t = $target->valid() ? $target->current() : null;
 
         while (!is_null($s) or !is_null($t)) {
             if (is_null($t)) {

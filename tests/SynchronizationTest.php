@@ -102,6 +102,25 @@ final class SynchronizationTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals([new Str('A')], $added, 'One A was more in source. Should be added to target.');
     }
 
+    /**
+     * @testdox #1 Must accept EmptyIterator as source or target
+     * @test
+     */
+    public function must_accept_EmptyIterator()
+    {
+        $sut = new Synchronization();
+        $dummy = function ($value) {};
+
+        $sut(
+            new \EmptyIterator,
+            new \EmptyIterator,
+            $dummy,
+            $dummy
+        );
+
+        $this->assertTrue(true, 'The script must pass if Empty iterator is used as source and target');
+    }
+
     public function samples(): array
     {
         return [
