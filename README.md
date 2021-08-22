@@ -53,6 +53,7 @@ Here are some sample use cases with demo code:
   demo: [./demo/database_tables.php](./demo/database_tables.php))
 * Keeping local data in sync with data available in internet (
   demo: [./demo/internet_to_database.php](./demo/internet_to_database.php))
+* Syncing entities identified by unique id and having several attributes  (demo: [./demo/sync_entities.php](./demo/sync_entities.php))
 
 # Design
 
