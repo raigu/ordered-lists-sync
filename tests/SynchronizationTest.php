@@ -9,35 +9,6 @@ final class SynchronizationTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
-     * @dataProvider samples
-     */
-    public function regression($source, $target, $expectedAdded, $expectedRemoved)
-    {
-        $sut = new Synchronization();
-
-        $added = [];
-        $addSpy = function ($value) use (&$added) {
-            $added[] = $value;
-        };
-
-        $removed = [];
-        $removeSpy = function ($value) use (&$removed) {
-            $removed[] = $value;
-        };
-
-        $sut(
-            new \ArrayIterator($source),
-            new \ArrayIterator($target),
-            $addSpy,
-            $removeSpy
-        );
-
-        $this->assertEquals($expectedAdded, $added);
-        $this->assertEquals($expectedRemoved, $removed);
-    }
-
-    /**
-     * @test
      */
     public function elements_can_be_Stringable()
     {
@@ -119,6 +90,35 @@ final class SynchronizationTest extends \PHPUnit\Framework\TestCase
         );
 
         $this->assertTrue(true, 'The script must pass if Empty iterator is used as source and target');
+    }
+
+    /**
+     * @test
+     * @dataProvider samples
+     */
+    public function regression($source, $target, $expectedAdded, $expectedRemoved)
+    {
+        $sut = new Synchronization();
+
+        $added = [];
+        $addSpy = function ($value) use (&$added) {
+            $added[] = $value;
+        };
+
+        $removed = [];
+        $removeSpy = function ($value) use (&$removed) {
+            $removed[] = $value;
+        };
+
+        $sut(
+            new \ArrayIterator($source),
+            new \ArrayIterator($target),
+            $addSpy,
+            $removeSpy
+        );
+
+        $this->assertEquals($expectedAdded, $added);
+        $this->assertEquals($expectedRemoved, $removed);
     }
 
     public function samples(): array

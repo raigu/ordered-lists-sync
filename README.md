@@ -75,6 +75,25 @@ or [IteratorAggregate](https://www.php.net/manual/en/class.iteratoraggregate.php
 Thirdly, it allows creating components which do not do any job in constructor. This is convenient when using dependency
 injection or declarative programming.
 
+# Development
+
+## Setting up
+
+```bash
+$ git clone git@github.com:raigu/ordered-lists-sync.git
+$ cd ordered-lists-sync
+$ composer install
+```
+
+## Testing
+
+```bash
+$ composer test
+$ composer coverage
+```
+
+
+
 # Algorithm
 
 Algorithm works same way like we use dictionary. If all words are ordered, then we know exactly where some word should be.
