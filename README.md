@@ -1,6 +1,7 @@
 [![Latest Stable Version](http://poser.pugx.org/raigu/ordered-lists-sync/v/stable)](https://packagist.org/packages/raigu/ordered-lists-sync)
 [![build](https://github.com/raigu/ordered-lists-sync/workflows/build/badge.svg)](https://github.com/raigu/ordered-data-sync/actions)
 [![codecov](https://codecov.io/gh/raigu/ordered-lists-sync/branch/main/graph/badge.svg?token=43B0X95CZ3)](https://codecov.io/gh/raigu/ordered-data-sync)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/raigu/ordered-lists-sync/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/raigu/ordered-lists-sync/?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Dependents](http://poser.pugx.org/raigu/ordered-lists-sync/dependents)](https://packagist.org/packages/raigu/ordered-lists-sync)
 
