@@ -6,7 +6,8 @@
 [![Dependents](http://poser.pugx.org/raigu/ordered-lists-sync/dependents)](https://packagist.org/packages/raigu/ordered-lists-sync)
 
 Library for synchronizing ordered data with the minimum of insert and delete operations. 
-Suitable for lage data sets in isolated environments.
+
+Optimized for large datasets. Suitable for keeping in sync internal data with outside source. See [demos](./demo).
 
 
 # Compatibility
@@ -22,7 +23,7 @@ $ composer require raigu/ordered-lists-sync
 # Usage
 
 `\Raigu\OrderedListsSynchronization\Synchronization` compares source and target lists. It detects which elements have
-been added or removed in source compared to target and calls corresponding callback.
+been added or removed in source compared to the target and calls corresponding callback.
 
 The source and target must be of type `Iterator`.
 
@@ -45,10 +46,7 @@ REMOVE: C
 
 # Use Cases
 
-Package allows to implement stream based approach. This is possible, because this algorithm iterates thorough source and
-target only once. Also, algorithm generates minimal addition and removal operations.
-
-Here are some sample use cases with demo code:
+Sample use cases with demo code:
 
 * Keeping a relational database table in sync with another (
   demo: [./demo/database_tables.php](./demo/database_tables.php))
@@ -60,7 +58,7 @@ Here are some sample use cases with demo code:
 
 The `\Raigu\OrderedListsSynchronization\Synchronization` has only one purpose. Therefore, it
 is [designed](https://www.php.net/manual/en/language.oop5.magic.php#object.invoke) so the instance will be a function,
-no method is exposed.
+no method is exposed. It is an object because it allows extending it in future (for example adding logging).
 
 Using `Iterator` type for source and target has several advantages.
 
