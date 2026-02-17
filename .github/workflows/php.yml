@@ -12,7 +12,7 @@ jobs:
     name: PHP ${{ matrix.php }}
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
@@ -34,7 +34,7 @@ jobs:
         args: --sarif-file-output=snyk.sarif
 
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: snyk.sarif
 
@@ -43,7 +43,7 @@ jobs:
         XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover=./coverage.xml
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v4
       with:
         token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
         files: ./coverage.xml

@@ -28,5 +28,10 @@
     "scripts": {
         "test": "./vendor/bin/phpunit --testdox",
         "coverage": "./vendor/bin/phpunit --coverage-text"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
     }
 }
